@@ -284,4 +284,14 @@ html.nm-opened
 		font-family: firasans, sans-serif
 		text-align: center
 
+$colors: $blue, $red, $accent
+@for $i from 1 through length($colors)
+	.carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+		background-color: nth($colors, $i)
+
+
+
+
+
+
 @import "media"
