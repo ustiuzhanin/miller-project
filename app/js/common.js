@@ -63,6 +63,37 @@ $(function() {
 	$('select').selectize({
 	});
 
+	$('.reviews').owlCarousel({
+		loop: true,
+		items: 1,
+		smartSpeed: 700,
+		nav: false,
+		autoHeight: true
+	});
+
+	$('.partners').owlCarousel({
+		loop: true,
+		smartSpeed: 700,
+		dots: false,
+		nav: true,
+		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+		responsiveClass: true,
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			},
+			929: {
+				items: 3
+			},
+			1200: {
+				items: 4
+			}
+		}
+	});
+
 	//resize window
 	function onResize() {
 		$('.carousel-services-content').equalHeights();

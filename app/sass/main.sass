@@ -45,6 +45,9 @@ body
 	line-height: 1.4
 	text-transform: uppercase
 
+.text-center
+	text-align: center
+
 .logo
 	img
 		width: 125px
@@ -406,6 +409,14 @@ $colors: $blue, $red, $accent
 			position: absolute
 			background-color: rgba($accent, .92)
 
+	&-partners.section-overlay
+		&::before
+			background-color: #fff
+		.h2
+			margin-top: 10px
+			span
+				color: $accent
+
 .section-overlay
 	&::before
 		content: ''
@@ -562,5 +573,102 @@ select
 
 	.button
 		margin-top: 40px
+
+.reviews
+	text-align: center
+	.owl-dots
+		width: 100%
+		text-align: center
+		display: inline-block
+		margin-top: 60px
+		.owl-dot
+			width: 8px
+			height: 8px
+			background-color: #fff
+			border-radius: 10em
+			display: inline-block
+			margin: 5px
+			transition: background-color .5s ease, transform .5s ease
+			&.active
+				background-color: $accent
+				transform: scale(1.3)
+
+.review
+	margin-top: 20px
+	&-header
+		font-family: 'Times New Roman', serif
+		font-style: italic
+		font-size: 30px
+		font-weight: bold
+	&-date
+		font-family: 'Times New Roman', serif
+		font-style: italic
+		font-size: 15px
+		margin-top: 2px
+		color: #888
+	&-stars
+		margin: 20px 0 30px
+		font-size: 14px
+		color: $accent
+		.fa
+			margin: 0 2.5px
+	&-text
+		color: #95989A
+
+
+
+.quotes
+	position: absolute
+	width: 100%
+	&::before, &::after
+		content: ',,'
+		position: absolute
+		top: 180px
+		font-size: 56px
+		color: $accent
+		font-family: 'Times New Roman', serif
+		font-weight: bold
+		line-height: 0
+		transform: rotate(180deg)
+		display: block
+	&::before
+		top: 200px
+		left: -60px
+	&::after
+		right: -60px
+		transform: rotate(0)
+
+.partners
+	.partner
+		width: 100%
+		display: flex
+		margin: auto
+	.owl-stage
+		display: flex
+	.owl-item
+		margin-top: 30px
+		img
+			max-width: 100%
+			width: auto
+			display: inline-block
+			margin: auto
+	.owl-nav
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 2
+		> div
+			position: absolute
+			top: 50px
+			color: #999
+			font-size: 30px
+			transition: opacity .5s ease
+			padding: 0 10px
+			&:hover
+				opacity: .6
+			&.owl-prev
+				left: -60px
+			&.owl-next
+				right: -60px
 
 @import "media"
